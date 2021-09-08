@@ -1,0 +1,24 @@
+
+config global
+	option anon_swap '0'
+	option anon_mount '0'
+	option auto_swap '1'
+	option auto_mount '1'
+	option delay_root '5'
+	option check_fs '0'
+
+config mount
+	option target '/boot'
+	option uuid 'B465-EAA2'
+	option enabled '0'
+
+config mount
+	option target '/'
+	option uuid 'ff313567-e9f1-5a5d-9895-3ba130b4a864'
+	option enabled '0'
+
+config mount
+	option target '/mnt/sda3'
+	option uuid '8e62563a-8f7d-413e-86a5-0ca5aca808dd'
+	option enabled '1'
+

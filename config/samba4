@@ -1,0 +1,23 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option description 'Hyperion'
+	#option enable_extra_tuning '0'
+
+## example share
+config sambashare
+	option create_mask '0666'
+	option dir_mask '0777'
+	option name 'share'
+	option guest_ok 'yes'
+        option users 'samba'
+	option read_only 'no'
+	option path '/mnt/sda3/share'
+        option browseable 'yes'
+
+## reduce process priority via nice
+config procd 'extra'
+	option samba_nice '3'
+## on mvebu platform we need negative values!
+	#option samba_nice '-10'
